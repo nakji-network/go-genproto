@@ -84,12 +84,13 @@ type InterestRate struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Ts     *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=ts,proto3" json:"ts,omitempty"`     // [time_series=true]
-	Pair   *Pair                  `protobuf:"bytes,2,opt,name=pair,proto3" json:"pair,omitempty"` // lending: borrow token0, collateral token1. trading: funding rate for long token0/token1 pair
-	Type   AssetType              `protobuf:"varint,3,opt,name=type,proto3,enum=nakji.data.v1beta1.AssetType" json:"type,omitempty"`
-	Amount *decimal.Decimal       `protobuf:"bytes,4,opt,name=amount,proto3" json:"amount,omitempty"`
-	Rate   *decimal.Decimal       `protobuf:"bytes,5,opt,name=rate,proto3" json:"rate,omitempty"`
-	Period *durationpb.Duration   `protobuf:"bytes,6,opt,name=period,proto3" json:"period,omitempty"`
+	Ts   *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=ts,proto3" json:"ts,omitempty"`     // [time_series=true]
+	Pair *Pair                  `protobuf:"bytes,2,opt,name=pair,proto3" json:"pair,omitempty"` // lending: borrow token0, collateral token1. trading: funding rate
+	// for long token0/token1 pair
+	Type   AssetType            `protobuf:"varint,3,opt,name=type,proto3,enum=nakji.data.v1beta1.AssetType" json:"type,omitempty"`
+	Amount *decimal.Decimal     `protobuf:"bytes,4,opt,name=amount,proto3" json:"amount,omitempty"`
+	Rate   *decimal.Decimal     `protobuf:"bytes,5,opt,name=rate,proto3" json:"rate,omitempty"`
+	Period *durationpb.Duration `protobuf:"bytes,6,opt,name=period,proto3" json:"period,omitempty"`
 }
 
 func (x *InterestRate) Reset() {

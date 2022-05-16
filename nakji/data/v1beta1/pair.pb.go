@@ -26,8 +26,11 @@ type Pair struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id     []byte `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`         // address or other id [index = true, unique = true, unmarshal.encoding = HEX]
-	Token0 []byte `protobuf:"bytes,2,opt,name=token0,proto3" json:"token0,omitempty"` //	byte representation of token address exc. 0x (e.g. \xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), typically corresponds with nakji.data.Token.id
+	Id []byte `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"` // address or other id [index = true, unique = true,
+	// unmarshal.encoding = HEX]
+	Token0 []byte `protobuf:"bytes,2,opt,name=token0,proto3" json:"token0,omitempty"` //	byte representation of token address exc. 0x (e.g.
+	//\xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), typically
+	//corresponds with nakji.data.Token.id
 	Token1 []byte `protobuf:"bytes,3,opt,name=token1,proto3" json:"token1,omitempty"`
 }
 

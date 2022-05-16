@@ -26,7 +26,8 @@ type Token struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id       []byte `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"` // address or other id [index = true, unique = true, unmarshal.encoding = HEX]
+	Id []byte `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"` // address or other id [index = true, unique = true,
+	// unmarshal.encoding = HEX]
 	Decimals uint32 `protobuf:"varint,2,opt,name=decimals,proto3" json:"decimals,omitempty"`
 	Name     string `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
 	Symbol   string `protobuf:"bytes,4,opt,name=symbol,proto3" json:"symbol,omitempty"`
